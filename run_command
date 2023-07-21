@@ -1,0 +1,27 @@
+# Step 1: Build and run the Java backend (Spring Boot)
+echo "Building and running Java backend..."
+cd myproject
+mvn clean install
+mvn spring-boot:run
+
+# Step 2: Set up and run the Django backend
+echo "Setting up Django backend..."
+cd myproject_django
+# You may need to set up a virtual environment and install Django and other dependencies here
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver
+
+# Step 3: Run Python scripts
+echo "Running Python scripts..."
+cd python-scripts
+# Run your Python scripts here using the appropriate Python interpreter (e.g., python script.py)
+
+# Step 4: Build and run the React frontend
+echo "Building and running React frontend..."
+cd frontend-react
+npm install
+npm start
+
+echo "All steps executed successfully!"
+
